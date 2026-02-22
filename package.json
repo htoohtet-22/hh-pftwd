@@ -1,0 +1,47 @@
+{
+  "name": "hh-pftwd",
+  "version": "1.0.0",
+  "description": "This is just a personal web-dev project that I'm trying to build myself with a tiny amount of help from AI. It will be a personal finance tracking web application developed with libraries and dependencies that I have learnt during my Polytechnic and Year-long Internship.\r - Frontend: React, Next.js, MUI, and TailwindCSs\r - Backend: Next.JS and Prisma\r - Database: Neon DB PostgreSQL",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.3.8",
+    "@prisma/adapter-pg": "^7.4.1",
+    "@prisma/client": "^7.4.1",
+    "dotenv": "^17.3.1",
+    "next": "16.1.6",
+    "pg": "^8.18.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/pg": "^8.16.0",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^10.0.1",
+    "eslint-config-next": "^0.2.4",
+    "prisma": "^7.4.1",
+    "tailwindcss": "^4",
+    "tsx": "^4.21.0",
+    "typescript": "^5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htoohtet-22/hh-pftwd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/htoohtet-22/hh-pftwd/issues"
+  },
+  "homepage": "https://github.com/htoohtet-22/hh-pftwd#readme"
+}

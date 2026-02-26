@@ -12,3 +12,45 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+enum EntryType {
+  INCOME
+  EXPENSE
+}
+
+model User {
+  id       Int     @id @default(autoincrement())
+  username String  @unique
+  email    String  @unique
+  password String
+  assets   Asset[]
+}
+
+model AssetType {
+  id     Int     @id @default(autoincrement())
+  name   String  @unique
+  assets Asset[]
+}
+
+model Asset {
+  id      Int       @id @default(autoincrement())
+  name    String
+  balance Decimal   @db.Decimal(12, 2)
+  userId  Int
+  user    User      @relation(fields: [userId], references: [id])
+  typeId  Int
+  type    AssetType @relation(fields: [typeId], references: [id])
+  entries Entry[]
+
+  @@unique([userId, name])
+}
+
+model Entry {
+  id         Int       @id @default(autoincrement())
+  name       String
+  amount     Decimal   @db.Decimal(12, 2)
+  type       EntryType
+  occurredAt DateTime
+  assetId    Int
+  asset      Asset     @relation(fields: [assetId], references: [id])
+}

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This is just a personal web-dev project that I'm trying to build myself with a tiny amount of help from AI. It will be a personal finance tracking web application developed with libraries and dependencies that I have learnt during my Polytechnic and Year-long Internship.\r - Frontend: React, Next.js, MUI, and TailwindCSs\r - Backend: Next.JS and Prisma\r - Database: Neon DB PostgreSQL",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -H 0.0.0.0",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
